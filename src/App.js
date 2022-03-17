@@ -8,10 +8,11 @@ import Countries from './components/Countries/Countries';
 function App() {
   return (
     <div className="App">
-        <LoadCountries/>
+        {/* <LoadCountries/>
         <Person/>
-        <Header/>
+        <Header/> */}
         <Countries/>
+
     </div>
   );
 }
@@ -22,7 +23,7 @@ function LoadCountries(){
     fetch('https://restcountries.com/v3.1/all')
     .then(res => res.json())
     .then(data =>setCountries(data))
-  },[])
+  },[]);
   return(
     <div>
       <h3>hellow world.</h3>
