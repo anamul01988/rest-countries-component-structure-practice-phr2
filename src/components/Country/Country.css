@@ -1,0 +1,9 @@
+.country{
+    background: pink;
+    color: balck;
+    border: 3px solid #fff;
+    margin : 30px;
+}
+.country img{
+    width: 150px;
+}

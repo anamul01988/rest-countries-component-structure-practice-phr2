@@ -1,4 +1,5 @@
 import React from 'react';
+import './Countries.css';
 import { useEffect, useState } from 'react';
 import Country from '../Country/Country';
 
@@ -10,13 +11,15 @@ const Countries = () => {
       .then(data =>setCountries(data))
     },[]);
     return (
-        <div>
+        <div >
         <h3>hellow world.</h3>
         <p>{countries.length}</p>
+        <div className='countries-container'>
         {
           // countries.map(countries => console.log(countries))
           countries.slice(0,4).map(countries => <Country countries={countries} name = {countries.name.common} population={countries.population}></Country>)
         }
+        </div>
       </div>
     );
 };
